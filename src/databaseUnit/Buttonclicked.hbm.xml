@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 03.05.2019 10:41:27 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="databaseUnit.Buttonclicked" table="buttonclicked" catalog="happybuttondb" optimistic-lock="version">
+        <id name="idPlace" type="int">
+            <column name="idPlace" />
+            <generator class="assigned" />
+        </id>
+        <property name="buttonClicked" type="boolean">
+            <column name="ButtonClicked" not-null="true" />
+        </property>
+        <property name="time" type="date">
+            <column name="time" length="10" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

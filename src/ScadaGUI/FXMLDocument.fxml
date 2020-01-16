@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="612.0" prefWidth="746.0" style="-fx-background-color: #2E3348;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ScadaGUI.FXMLDocumentController">
+   <children>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="-3.0" layoutY="-8.0" prefHeight="40.0" prefWidth="746.0" text="KoraSCADA" textFill="WHITE">
+         <font>
+            <Font name="Cyberpunk Regular" size="59.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="logo" fitHeight="84.0" fitWidth="43.0" layoutX="5.0" layoutY="3.0" onMouseClicked="#logoEasternEgg" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Assets/korabel.jpg" />
+         </image>
+      </ImageView>
+      <AnchorPane layoutY="90.0" prefHeight="520.0" prefWidth="746.0" style="-fx-background-color: #0FFFFF;">
+         <children>
+            <Button fx:id="settings" layoutX="603.0" layoutY="467.0" mnemonicParsing="false" onAction="#clickedBtn" text="Настройки" />
+            <Button fx:id="exitButt" layoutX="614.0" layoutY="427.0" mnemonicParsing="false" onAction="#clickedBtn" text="Выход" textOverrun="LEADING_WORD_ELLIPSIS" />
+            <Button fx:id="connect" layoutX="582.0" layoutY="308.0" mnemonicParsing="false" onAction="#clickedBtn" text="Обновить данные" />
+            <TableView fx:id="workTable" layoutX="14.0" layoutY="87.0" prefHeight="421.0" prefWidth="530.0">
+               <columns>
+                  <TableColumn fx:id="date" prefWidth="106.0" text="Дата" />
+                  <TableColumn fx:id="colTimeStart" prefWidth="75.0" text="Время" />
+                  <TableColumn fx:id="benchName" prefWidth="145.0" text="Оборудование" />
+                  <TableColumn fx:id="sessionTime" prefWidth="126.0" text="Наработано" />
+                  <TableColumn fx:id="counter" prefWidth="151.0" text="Количество включений" />
+               </columns>
+            </TableView>
+            <Button fx:id="saveToFile" layoutX="582.0" layoutY="345.0" mnemonicParsing="false" onAction="#clickedBtn" prefHeight="60.0" prefWidth="115.0" text="Экспорт в Excel" />
+            <ComboBox fx:id="machineList" layoutX="158.0" layoutY="9.0" prefWidth="150.0" />
+            <DatePicker fx:id="dateTo" layoutX="370.0" layoutY="47.0" />
+            <DatePicker fx:id="dateFrom" layoutX="158.0" layoutY="47.0" />
+            <CheckBox fx:id="chkBxDetailed" layoutX="582.0" layoutY="154.0" mnemonicParsing="false" text="Детально" />
+            <CheckBox fx:id="chkBxIdles" layoutX="582.0" layoutY="172.0" mnemonicParsing="false" text="Простои оборудования" />
+            <Label layoutX="92.0" layoutY="51.0" text="Данные с" />
+            <Label layoutX="345.0" layoutY="51.0" text="по" />
+            <Label layoutX="61.0" layoutY="13.0" text="Оборудование" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
